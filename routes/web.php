@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('HOME');
 })->name('HOME');
 
-Route::get('/COMICS', function () {
+Route::get('/COMICS', 'ComicController@index')->name('COMICS');
+Route::get('COMICS/{COMIC}', 'ComicController@show')->name('comic');
 
-    return view('COMICS');
-})->name('COMICS');
+
 
 Route::get('/MOVIES', function () {
 
