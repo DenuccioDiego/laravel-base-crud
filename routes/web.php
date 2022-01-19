@@ -15,15 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $item_menù = config('db_comics_header');
-
-    return view('HOME' , compact('item_menù'));
+    return view('HOME');
 })->name('HOME');
-
-
-
-
-
 
 Route::get('/COMICS', function () {
 
