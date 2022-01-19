@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('/admin/comic', 'Admin\AdminComicController')->names([
-    'index' => 'admin'
+    'index' => 'admin',
+    'create' => 'record.create',
+    'store' => 'record.store',
 ]);
 
 

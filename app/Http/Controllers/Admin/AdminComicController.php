@@ -16,7 +16,7 @@ class AdminComicController extends Controller
     public function index()
     {
         //ddd(Comic::all());
-        $comics = Comic::all();
+        $comics = Comic::paginate(6);
         return view('admin.index', compact('comics'));
     }
 
@@ -27,7 +27,7 @@ class AdminComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.partials.create_form');
     }
 
     /**
@@ -38,7 +38,17 @@ class AdminComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //ddd($request->all());
+        
+        $record = new Comic();
+
+        $record->title = $request->title;
+        $record->description = $request->description;
+        $record->thumb = $request->thumb;
+        $record->price = $request->price;
+        $record->series = $request->series;
+
+        $record->save();
     }
 
     /**

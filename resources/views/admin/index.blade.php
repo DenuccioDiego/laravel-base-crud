@@ -4,7 +4,7 @@
 
 <table class="table">
      <thead>
-          <tr>
+          <tr class="text-center">
                <th>id</th>
                <th>title</th>
                <th>description</th>
@@ -13,6 +13,7 @@
                <th>series</th>
                <th>created_at</th>
                <th>update_at</th>
+               <th>Actions</th>
           </tr>
      </thead>
      <tbody>
@@ -26,11 +27,15 @@
                <td>{{ $comic->series }}</td>
                <td>{{ $comic->created_at }}</td>
                <td>{{ $comic->updated_at }}</td>
+               <td>
+                    view-edit-delete
+               </td>
           </tr>
           @endforeach
      </tbody>
 </table>
 
+{{$comics->links()}}
 
 @endsection
 
