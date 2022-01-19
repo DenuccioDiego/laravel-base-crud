@@ -9,13 +9,16 @@
 
     <body>
         
-     @include('partials.header')
+    @include('partials.header')
      
-     <main>
-          @yield('content')
-     </main>
+    @include('partials.jumbotron')
 
-     @include('partials.footer')
+    <main>
+        @yield('content')
+    </main>
+
+        @include('partials.footer')
 
     </body>
+    
 </html>

@@ -145,6 +145,7 @@
                     </div>
                </div>
           
+          @include('partials.info_page_card')
           </div>
 
      </section>
