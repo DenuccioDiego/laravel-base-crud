@@ -24,7 +24,17 @@
                     <img src="{{asset('img/dc-logo.png')}}" alt="">
                </div>
 
-             
+               <div class="col-8 text-center">
+                    @foreach (config('db_comics_header') as $item)
+
+                         <span class="{{ Route::currentRouteName() === $item['name_route'] ? 'active' : '' }}">
+                              <a href="{{route($item['name_route'])}}">
+                                   {{$item['text']}}
+                              </a>
+                         </span>
+
+                    @endforeach
+               </div>
 
                <div class="col-2 text-end">
                     <input class="text-end"  type="text" placeholder="Search..">

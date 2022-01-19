@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $item_menù = config('db_comics_header');
+
+    return view('HOME' , compact('item_menù'));
 });
