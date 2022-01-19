@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::resource('/admin/comic', 'Admin\ComicController');
+Route::resource('/admin/comic', 'Admin\AdminComicController');
 
 
 Route::get('/', function () { return view('home'); })->name('home');
