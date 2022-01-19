@@ -18,4 +18,55 @@ Route::get('/', function () {
     $item_menù = config('db_comics_header');
 
     return view('HOME' , compact('item_menù'));
-});
+})->name('HOME');
+
+
+
+
+
+
+Route::get('/COMICS', function () {
+
+    return view('COMICS');
+})->name('COMICS');
+
+Route::get('/MOVIES', function () {
+
+    return view('MOVIES');
+})->name('MOVIES');
+
+Route::get('/TV', function () {
+
+    return view('TV');
+})->name('TV');
+
+Route::get('/GAMES', function () {
+
+    return view('GAMES');
+})->name('GAMES');
+
+Route::get('/COLLECTIBLES', function () {
+
+    return view('COLLECTIBLES');
+})->name('COLLECTIBLES');
+
+Route::get('/VIDEOS', function () {
+
+    return view('VIDEOS');
+})->name('VIDEOS');
+
+Route::get('/FANS', function () {
+
+    return view('FANS');
+})->name('FANS');
+
+Route::get('/NEWS', function () {
+
+    return view('NEWS');
+})->name('NEWS');
+
+Route::get('/SHOP', function () {
+
+    return view('SHOP');
+})->name('SHOP');
+
