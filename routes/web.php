@@ -15,51 +15,51 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    return view('HOME');
-})->name('HOME');
+    return view('home');
+})->name('home');
 
-Route::get('/COMICS', 'ComicController@index')->name('COMICS');
-Route::get('COMICS/{COMIC}', 'ComicController@show')->name('comic');
+Route::get('/comics', 'ComicController@index')->name('comics');
+Route::get('comics/{comic}', 'ComicController@show')->name('comic');
 
 
 
-Route::get('/MOVIES', function () {
+Route::get('/movies', function () {
 
-    return view('MOVIES');
-})->name('MOVIES');
+    return view('movies');
+})->name('movies');
 
-Route::get('/TV', function () {
+Route::get('/tv', function () {
 
-    return view('TV');
-})->name('TV');
+    return view('tv');
+})->name('tv');
 
-Route::get('/GAMES', function () {
+Route::get('/games', function () {
 
-    return view('GAMES');
-})->name('GAMES');
+    return view('games');
+})->name('games');
 
-Route::get('/COLLECTIBLES', function () {
+Route::get('/collectibles', function () {
 
-    return view('COLLECTIBLES');
-})->name('COLLECTIBLES');
+    return view('collectibles');
+})->name('collectibles');
 
-Route::get('/VIDEOS', function () {
+Route::get('/videos', function () {
 
-    return view('VIDEOS');
-})->name('VIDEOS');
+    return view('videos');
+})->name('videos');
 
-Route::get('/FANS', function () {
+Route::get('/fans', function () {
 
-    return view('FANS');
-})->name('FANS');
+    return view('fans');
+})->name('fans');
 
-Route::get('/NEWS', function () {
+Route::get('/news', function () {
 
-    return view('NEWS');
-})->name('NEWS');
+    return view('news');
+})->name('news');
 
-Route::get('/SHOP', function () {
+Route::get('/shop', function () {
 
-    return view('SHOP');
-})->name('SHOP');
+    return view('shop');
+})->name('shop');
 
