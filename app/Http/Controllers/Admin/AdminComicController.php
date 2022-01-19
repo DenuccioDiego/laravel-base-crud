@@ -39,7 +39,7 @@ class AdminComicController extends Controller
     public function store(Request $request)
     {
         //ddd($request->all());
-        
+
         $record = new Comic();
 
         $record->title = $request->title;
@@ -49,6 +49,9 @@ class AdminComicController extends Controller
         $record->series = $request->series;
 
         $record->save();
+
+
+        return redirect()->route('admin');
     }
 
     /**
