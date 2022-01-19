@@ -18,14 +18,14 @@
      <tbody>
           @foreach($comics as $comic)
           <tr>
-               <td scope="row"></td>
                <td>{{ $comic->id }}</td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
+               <td>{{ $comic->title }}</td>
+               <td>{{ $comic->description }}</td>
+               <td>{{ $comic->thumb }}</td>
+               <td>{{ $comic->price }}</td>
+               <td>{{ $comic->series }}</td>
+               <td>{{ $comic->created_at }}</td>
+               <td>{{ $comic->updated_at }}</td>
           </tr>
           @endforeach
      </tbody>
