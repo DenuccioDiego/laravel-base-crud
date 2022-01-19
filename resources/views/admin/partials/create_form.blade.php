@@ -11,7 +11,7 @@
           @csrf
           <div class="mb-3">
                <label for="title" class="form-label">Titolo</label>
-               <input type="text" name="title" id="title" class="form-control" placeholder="inserire titolo" aria-describedby="helpTitle">
+               <input type="text" name="title" id="title" class="form-control" placeholder="inserire titolo" aria-describedby="helpTitle" required>
                <small id="helpTitle" class="text-muted">max 250 caratteri</small>
           </div>
 
@@ -29,7 +29,7 @@
           <div class="mb-3">
                <label for="price" class="form-label">Prezzo</label>
                <input type="number"
-               class="form-control" name="price" id="price" aria-describedby="helpPrice" placeholder="inserire prezzo">
+               class="form-control" name="price" id="price" aria-describedby="helpPrice" placeholder="inserire prezzo" required>
                <small id="helpPrice" class="form-text text-muted">only number</small>
           </div>
 
