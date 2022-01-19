@@ -1,5 +1,11 @@
 @use 'bootstrap';
 
+h1{
+     color: brown;
+     &:hover{
+          color: cadetblue;
+     }
+}
 
 /* Variables */
 $top_color : #0282f9;

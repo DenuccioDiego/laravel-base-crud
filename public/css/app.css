@@ -11243,6 +11243,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+h1 {
+  color: brown;
+}
+h1:hover {
+  color: cadetblue;
+}
+
 /* Variables */
 header {
   font-weight: 600;
