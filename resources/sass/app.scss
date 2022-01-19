@@ -1,1 +1,215 @@
-//
+@use 'bootstrap';
+
+
+/* Variables */
+$top_color : #0282f9;
+$color_footer_bot: #303030;
+$details_comics : #f6f6f6;
+$price_bar : #55ba59;
+$color_border: #357739;
+$info_color: #b0fd9c;
+$title_card: #003f5e;
+$text_card: #838283;
+$info_talent: #04b1e1;
+$info_page_card: rgba(175, 168, 168, 0.603);
+
+header{
+     a{
+          text-decoration: none;
+          color: black;
+     }
+     font-weight: 600;
+
+     .active{
+          border-bottom: 4px solid $top_color;
+     }
+
+     #top_header{
+          background-color: $top_color;
+          font-size: 0.75rem;
+          color: white;
+     }
+     nav{
+          .row{
+               div:nth-child(2)>span{
+                    padding-inline: 12px;
+               }
+               input{
+                    border: none;
+                    border-bottom: $top_color 3px solid;
+                    width: 75%;
+                    color:black
+               }
+          }
+     }
+}
+
+#jumbotron{
+     background-image: url("../img/jumbotron.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 40vh;
+}
+
+#info_page{
+     background-color: $top_color;
+     img{
+          width: 25% ;
+     }
+     span{
+          color: white;
+     }
+}
+
+#footer_top{
+     background-image: url("../img/footer-bg.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+}
+
+.container_footer{
+     
+     span{
+          color: white;
+          font-size: 1.25rem;
+          line-height: 50px;
+     }
+}
+.link_utili{
+     width: 40%;
+}
+.image_logo_footer{
+     width: 60%;
+     background-image: url("../img/dc-logo-bg.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     
+}
+.link_utili>div{
+     width: calc(100% / 3);
+     
+}
+li{
+     padding: 2px;
+     color: grey;
+     list-style: none;
+}
+
+
+#footer_bottom{
+     padding: 2rem;
+     background-color: $color_footer_bot;
+
+     button{
+          background-color: $color_footer_bot ;
+          border: none;
+          color: white;
+          padding: 10px;
+          border: 2px solid $top_color;
+          font-weight: 600;
+     }
+
+     .row{
+          .col-6:nth-child(2){
+               span{
+                    color: $top_color;
+               }
+          }
+     }
+
+}
+
+
+#cards_section{
+     background-color: #1c1c1c;
+
+     img{
+          width: 12rem;
+          height: 12rem;
+          object-position: top;
+          object-fit: cover;
+     }
+
+     .container>span{
+          background-color: $top_color ;
+          top: -5%;
+          left: 0%;
+          font-weight: 600;
+     }
+     
+     .bg_botton{
+          background-color: $top_color;
+          font-weight: 600;
+     }
+
+     a{
+          text-decoration: none;
+     }
+}
+
+#one_card_section{
+
+     .container-card{
+          max-width: 1140px;
+          margin:auto;
+          padding-bottom: 7.5rem;
+     }
+
+     h2, h4{
+          color: $title_card;
+     }
+
+     p{
+          color: $text_card;
+          font-weight: 600;
+     }
+
+     #top_bar{
+          height: 10vh;
+          background-color: $top_color;
+          
+     }
+     #details_comics{
+          background-color: $details_comics;
+     }
+
+     &>.container-card>img{
+          top: -70%;
+          left: 1%;
+     }
+
+     .price_bar{
+          background-color: $price_bar;
+     }
+
+     .color_border{
+          border-color: $color_border !important;
+     }
+
+     .color_price_info{
+          color:$info_color;
+     }
+
+     .color_info{
+          color: $title_card;
+          font-weight: 600;
+     }
+
+     .color_talent_info{
+          color: $info_talent;
+     }
+
+
+     .container-info-page{
+          max-width: 1140px;
+          margin:auto;
+          img{
+               background-color: $info_page_card;
+               width: 65%;
+          }
+          .col-3{
+               color: $info_page_card;
+          }
+     }
+}
