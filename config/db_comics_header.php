@@ -12,8 +12,8 @@ return[
           'text' => "COMICS",
      ],
      [
-          'name_route'=> "movies",
-          'text' => "MOVIES",
+          'name_route'=> "admin",
+          'text' => "MOD ADMIN",
      ],
      [
           'name_route'=> "tv",
