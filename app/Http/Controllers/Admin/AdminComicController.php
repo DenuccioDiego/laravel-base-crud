@@ -51,7 +51,7 @@ class AdminComicController extends Controller
         $record->save();
 
 
-        return redirect()->route('admin');
+        return redirect()->route('record.show', $record->id);
     }
 
     /**
@@ -62,7 +62,10 @@ class AdminComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        //ddd($comic);
+
+        
+        return view('admin.partials.show_record', compact('comic'));
     }
 
     /**

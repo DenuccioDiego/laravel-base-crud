@@ -28,7 +28,9 @@
                <td>{{ $comic->created_at }}</td>
                <td>{{ $comic->updated_at }}</td>
                <td>
-                    view-edit-delete
+                    <a href="{{ route('record.show', $comic->id) }}">view</a>
+                    -edit
+                    -delete
                </td>
           </tr>
           @endforeach

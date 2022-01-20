@@ -19,6 +19,7 @@ Route::resource('/admin/comic', 'Admin\AdminComicController')->names([
     'index' => 'admin',
     'create' => 'record.create',
     'store' => 'record.store',
+    'show' => 'record.show'
 ]);
 
 
