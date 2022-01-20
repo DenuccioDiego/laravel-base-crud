@@ -21,7 +21,8 @@ Route::resource('/admin/comic', 'Admin\AdminComicController')->names([
     'store' => 'record.store',
     'show' => 'record.show',
     'edit'=> 'record.edit',
-    'update'=> 'record.update'
+    'update'=> 'record.update',
+    'destroy'=> 'record.delete'
 ]);
 
 

@@ -30,8 +30,14 @@
                <td>
                     <a href="{{ route('record.show', $comic->id) }}">view</a>
                     <a href="{{ route('record.edit', $comic->id) }}">-edit</a>
+
+                    <form action="{{ route('record.delete', $comic->id) }}" method="post">
+                         @csrf
+                         @method('DELETE')
+                         <button type="submit" class="btn">Delete</button>
+                    </form>
                     
-                    -delete
+                    
                </td>
           </tr>
           @endforeach
