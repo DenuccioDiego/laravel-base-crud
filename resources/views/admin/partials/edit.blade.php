@@ -7,7 +7,7 @@
           FORM PER LA MODIFICA DI UN RECORD
      </h1>
 
-     <form action="{{ route('record.update', ['id' => $comic->id ]) }}" method="post">
+     <form action="{{ route('record.update', $comic->id) }}" method="post">
           @csrf
           @method('PUT')
 

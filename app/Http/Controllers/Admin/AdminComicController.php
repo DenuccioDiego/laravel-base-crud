@@ -88,7 +88,11 @@ class AdminComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        ddd($request, $comic);
+        $edit_record = $request->all();
+
+        $comic->update($edit_record);
+        
+        return redirect()->route('admin');
     }
 
     /**
