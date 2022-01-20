@@ -29,7 +29,8 @@
                <td>{{ $comic->updated_at }}</td>
                <td>
                     <a href="{{ route('record.show', $comic->id) }}">view</a>
-                    -edit
+                    <a href="{{ route('record.edit', $comic->id) }}">-edit</a>
+                    
                     -delete
                </td>
           </tr>

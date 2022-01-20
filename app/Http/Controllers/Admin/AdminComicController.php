@@ -63,7 +63,6 @@ class AdminComicController extends Controller
     public function show(Comic $comic)
     {
         //ddd($comic);
-
         
         return view('admin.partials.show_record', compact('comic'));
     }
@@ -76,7 +75,8 @@ class AdminComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        //ddd($comic);
+        return view('admin.partials.edit', compact('comic'));
     }
 
     /**
@@ -88,7 +88,7 @@ class AdminComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        ddd($request, $comic);
     }
 
     /**
