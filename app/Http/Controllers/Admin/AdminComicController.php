@@ -97,9 +97,15 @@ class AdminComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $edit_record = $request->all();
+        $validate_update = $request->validate([
+            'title' => 'required|max:30',
+            'description' => 'nullable|max:255',
+            'thumb' => 'nullable|url',
+            'price' => 'nullable|numeric',
+            'series' => 'nullable|max:25',
+        ]);
 
-        $comic->update($edit_record);
+        $comic->update($validate_update);
         
         return redirect()->route('admin');
     }
