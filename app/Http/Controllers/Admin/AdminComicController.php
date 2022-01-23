@@ -38,18 +38,27 @@ class AdminComicController extends Controller
      */
     public function store(Request $request)
     {
-        //ddd($request->all());
+        $validated_record = $request->validate([
+            'title' => 'required|unique:comics|max:30',
+            'description' => 'nullable|max:255',
+            'thumb' => 'nullable|url',
+            'price' => 'nullable|numeric',
+            'series' => 'nullable|max:25',
+        ]);
+        //Comic::create($validated_record);
 
+        //ddd($request->all());
+        //ddd($validated_record);
+        
         $record = new Comic();
 
-        $record->title = $request->title;
-        $record->description = $request->description;
-        $record->thumb = $request->thumb;
-        $record->price = $request->price;
-        $record->series = $request->series;
+        $record->title = $validated_record['title'];
+        $record->description = $validated_record['description'];
+        $record->thumb = $validated_record['thumb'];
+        $record->price = $validated_record['price'];
+        $record->series = $validated_record['series'];
 
         $record->save();
-
 
         return redirect()->route('record.show', $record->id);
     }

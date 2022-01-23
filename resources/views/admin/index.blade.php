@@ -34,9 +34,8 @@
                     <form action="{{ route('record.delete', $comic->id) }}" method="post">
                          @csrf
                          @method('DELETE')
-                         <button type="submit" class="btn">Delete</button>
+                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
-                    
                     
                </td>
           </tr>

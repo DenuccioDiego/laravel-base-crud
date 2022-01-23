@@ -7,14 +7,17 @@ return[
           'name_route'=> "home",
           'text' => "HOME",
      ],
-     [
-          'name_route'=> "comics",
-          'text' => "COMICS",
-     ],
+
      [
           'name_route'=> "admin",
           'text' => "MOD ADMIN",
      ],
+
+     [
+          'name_route'=> "comics",
+          'text' => "COMICS",
+     ],
+     
      [
           'name_route'=> "tv",
           'text' => "TV",

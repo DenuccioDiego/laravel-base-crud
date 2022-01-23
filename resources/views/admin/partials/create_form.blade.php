@@ -11,24 +11,24 @@
           @csrf
           <div class="mb-3">
                <label for="title" class="form-label">Titolo</label>
-               <input type="text" name="title" id="title" class="form-control" placeholder="inserire titolo" aria-describedby="helpTitle" required>
+               <input value="{{ old('title') }}" type="text" name="title" id="title" class="form-control" placeholder="inserire titolo" aria-describedby="helpTitle" required>
                <small id="helpTitle" class="text-muted">max 250 caratteri</small>
           </div>
 
           <div class="mb-3">
                <label for="description" class="form-label">Descrizione</label>
-               <textarea class="form-control" name="description" id="description" rows="5" placeholder="inserire descrizione fumetto"></textarea>
+               <textarea class="form-control" name="description" id="description" rows="5" placeholder="inserire descrizione fumetto">{{ old('title') }}</textarea>
           </div>
 
           <div class="mb-3">
                <label for="thumb" class="form-label">Link immagine</label>
-               <input type="url" name="thumb" id="thumb" class="form-control" placeholder="inserire link immagine" aria-describedby="helpId">
+               <input value="{{ old('title') }}" type="url" name="thumb" id="thumb" class="form-control" placeholder="inserire link immagine" aria-describedby="helpId">
                <small id="helpId" class="text-muted"></small>
           </div>
 
           <div class="mb-3">
                <label for="price" class="form-label">Prezzo</label>
-               <input type="number"
+               <input type="number" value="{{ old('title') }}"
                class="form-control" name="price" id="price" aria-describedby="helpPrice" placeholder="inserire prezzo" required>
                <small id="helpPrice" class="form-text text-muted">only number</small>
           </div>
@@ -36,7 +36,7 @@
           <div class="mb-3">
                <label for="series" class="form-label">Series</label>
                <input type="text"
-               class="form-control" name="series" id="series" aria-describedby="helpPrice" placeholder="inserire serie">
+               class="form-control" name="series" id="series" aria-describedby="helpPrice" placeholder="inserire serie" value="{{ old('title') }}">
                <small id="helpPrice" class="form-text text-muted">max 50 caratteri</small>
           </div>
 
